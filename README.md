@@ -61,3 +61,77 @@ socket.send_json(request)
 response = socket.recv_json()
 print("Response:", response)
 ```
+*Note: This is example code. You will likely need to adjust it for your needs.
+
+## How to Receive Data
+
+### JSON Response Format
+The response is always a JSON object.
+- For current_weather: A list of up to 12 hourly forecasts.
+- For 5_day_forecast: A list of daily forecasts.
+- For severe_alert: A list of active severe weather alerts.
+
+#### Example Response for current_weather
+``` json
+[
+  {
+    "startTime": "2024-11-18 14:00:00",
+    "endTime": "2024-11-18 15:00:00",
+    "temperature": 55,
+    "temperatureUnit": "F",
+    "windSpeed": "10 mph",
+    "shortForecast": "Sunny"
+  },
+  {
+    "startTime": "2024-11-18 15:00:00",
+    "endTime": "2024-11-18 16:00:00",
+    "temperature": 56,
+    "temperatureUnit": "F",
+    "windSpeed": "12 mph",
+    "shortForecast": "Partly Cloudy"
+  },
+...
+]
+```
+
+#### Example Response for 5_day_forecast
+``` json
+[
+  {
+    "startTime": "2024-11-18 08:00:00",
+    "endTime": "2024-11-18 20:00:00",
+    "temperature": 60,
+    "temperatureUnit": "F",
+    "windSpeed": "10 mph",
+    "shortForecast": "Partly Cloudy"
+  },
+  {
+    "startTime": "2024-11-19 08:00:00",
+    "endTime": "2024-11-19 20:00:00",
+    "temperature": 62,
+    "temperatureUnit": "F",
+    "windSpeed": "8 mph",
+    "shortForecast": "Sunny"
+  },
+...
+]
+
+```
+
+#### Example Response for severe_alert
+``` json
+[
+  {
+    "number": 0,
+    "effective": "2024-11-18 14:00:00",
+    "expires": "2024-11-18 18:00:00",
+    "severity": "Severe",
+    "headline": "Severe Thunderstorm Warning",
+    "description": "A severe thunderstorm has been detected...",
+    "instruction": "Seek shelter indoors immediately."
+  },
+...
+]
+
+```
+
