@@ -40,7 +40,7 @@ Each request must include:
 ```
 
 #### Example Code
-
+```python
 import zmq
 
 # Set up ZeroMQ client
@@ -60,4 +60,4 @@ socket.send_json(request)
 # Wait for the response
 response = socket.recv_json()
 print("Response:", response)
-
+```
