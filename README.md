@@ -17,10 +17,6 @@ The following request types are supported:
 2. `5_day_forecast`: Fetches a 5-day weather forecast.
 3. `severe_alert`: Fetches any severe weather alerts.
 
----
-
-## How to Request Data
-
 ### Dependencies
 Ensure your environment has the following installed:
 - Python 3.x
@@ -32,6 +28,20 @@ The following code can be run in the terminal to install pyzmq and requests.
 pip install pyzmq requests
 ```
 
+### Accessing the Microservice
+To access the microservice:
+- Clone this repository
+- Open a terminal session and navigate to the repository directory
+- Run the microservice locally using the command:
+  
+```bash
+py weather_forecast.py
+```
+
+###
+---
+
+## How to Request Data
 
 ### Protocol
 - Use ZeroMQ with a **REQ/REP** socket type.
