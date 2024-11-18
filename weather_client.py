@@ -34,7 +34,7 @@ if __name__ == "__main__":
     # ZeroMQ pipe setup
     context = zmq.Context()
     socket = context.socket(zmq.REQ)
-    socket.connect("tcp://localhost:5555")
+    socket.connect("tcp://localhost:5556")
 
     # Print request options
     print("Weather Client")
