@@ -37,8 +37,9 @@ Each request must include:
   "type": "current_weather",
   "zipcode": "10001"
 }
+```
 
-#### Example Request
+#### Example Code
 
 import zmq
 
