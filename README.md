@@ -8,8 +8,8 @@ This microservice provides weather data, including current conditions, 5-day for
 
 ### Overview
 The microservice uses **JSON messages** sent over a ZeroMQ socket to handle requests and return responses.  
-**Endpoint**: `tcp://<server_address>:5555`  
-Replace `<server_address>` with the hostname or IP where the service is hosted.
+**Endpoint**: `tcp://<server_address>:5556`  
+Replace `<server_address>` with the hostname or IP where the service is hosted. For me, it is 'localhost'.
 
 ### Supported Request Types
 The following request types are supported:
@@ -37,3 +37,26 @@ Each request must include:
   "type": "current_weather",
   "zipcode": "10001"
 }
+
+#### Example Request
+
+import zmq
+
+# Set up ZeroMQ client
+context = zmq.Context()
+socket = context.socket(zmq.REQ)
+socket.connect("tcp://<server_address>:5556")  # Replace with actual address
+
+# Create the request
+request = {
+    "type": "current_weather",
+    "zipcode": "10001"
+}
+
+# Send the request
+socket.send_json(request)
+
+# Wait for the response
+response = socket.recv_json()
+print("Response:", response)
+
