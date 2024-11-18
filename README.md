@@ -21,6 +21,18 @@ The following request types are supported:
 
 ## How to Request Data
 
+### Dependencies
+Ensure your environment has the following installed:
+- Python 3.x
+- pyzmq
+- requests
+
+The following code can be run in the terminal to install pyzmq and requests.
+``` bash
+pip install pyzmq requests
+```
+
+
 ### Protocol
 - Use ZeroMQ with a **REQ/REP** socket type.
 - Send a JSON message containing the request details.
@@ -63,6 +75,7 @@ print("Response:", response)
 ```
 *Note: This is example code. You will likely need to adjust it for your needs.
 
+
 ## How to Receive Data
 
 ### JSON Response Format
@@ -89,8 +102,7 @@ The response is always a JSON object.
     "temperatureUnit": "F",
     "windSpeed": "12 mph",
     "shortForecast": "Partly Cloudy"
-  },
-...
+  }
 ]
 ```
 
@@ -112,8 +124,7 @@ The response is always a JSON object.
     "temperatureUnit": "F",
     "windSpeed": "8 mph",
     "shortForecast": "Sunny"
-  },
-...
+  }
 ]
 
 ```
@@ -129,8 +140,7 @@ The response is always a JSON object.
     "headline": "Severe Thunderstorm Warning",
     "description": "A severe thunderstorm has been detected...",
     "instruction": "Seek shelter indoors immediately."
-  },
-...
+  }
 ]
 
 ```
