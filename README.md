@@ -9,7 +9,7 @@ This microservice provides weather data, including current conditions, 5-day for
 ### Overview
 The microservice uses **JSON messages** sent over a ZeroMQ socket to handle requests and return responses.  
 **Endpoint**: `tcp://<server_address>:5556`  
-Replace `<server_address>` with the hostname or IP where the service is hosted. For me, it is 'localhost'.
+Replace `<server_address>` with the hostname or IP where the service is hosted. For me, it is "localhost".
 
 ### Supported Request Types
 The following request types are supported:
@@ -98,30 +98,30 @@ The response is always a JSON object.
 ``` json
 [
   {
-    'number': 1,
-    'startTime': '2024-11-18 21:00:00',
-    'endTime': '2024-11-18 22:00:00',
-    'temperature': 75,
-    'temperatureUnit': 'F',
-    'probabilityOfPrecipitation': {'unitCode': 'wmoUnit:percent', 'value': 1},
-    'dewpoint': {'unitCode': 'wmoUnit:degC', 'value': 17.77777777777778},
-    'relativeHumidity': {'unitCode': 'wmoUnit:percent', 'value': 69},
-    'windSpeed': '6 mph',
-    'windDirection': 'E',
-    'shortForecast': 'Mostly Cloudy'
+    "number": "1",
+    "startTime": "2024-11-18 21:00:00",
+    "endTime": "2024-11-18 22:00:00",
+    "temperature": "75",
+    "temperatureUnit": "F",
+    "probabilityOfPrecipitation": {"unitCode": "wmoUnit:percent", "value": "1"},
+    "dewpoint": {"unitCode": "wmoUnit:degC", "value": "17.77777777777778"},
+    "relativeHumidity": {"unitCode": "wmoUnit:percent", "value": "69"},
+    "windSpeed": "6 mph",
+    "windDirection": "E",
+    "shortForecast": "Mostly Cloudy"
   },
   {
-    'number': 2,
-    'startTime': '2024-11-18 22:00:00',
-    'endTime': '2024-11-18 23:00:00',
-    'temperature': 75,
-    'temperatureUnit': 'F',
-    'probabilityOfPrecipitation': {'unitCode': 'wmoUnit:percent', 'value': 2},
-    'dewpoint': {'unitCode': 'wmoUnit:degC', 'value': 17.77777777777778},
-    'relativeHumidity': {'unitCode': 'wmoUnit:percent', 'value': 69},
-    'windSpeed': '6 mph',
-    'windDirection': 'E',
-    'shortForecast': 'Mostly Cloudy'
+    "number": "2",
+    "startTime": "2024-11-18 22:00:00",
+    "endTime": "2024-11-18 23:00:00",
+    "temperature": "75",
+    "temperatureUnit": "F",
+    "probabilityOfPrecipitation": {"unitCode": "wmoUnit:percent", "value": "2"},
+    "dewpoint": {"unitCode": "wmoUnit:degC", "value": "17.77777777777778"},
+    "relativeHumidity": {"unitCode": "wmoUnit:percent", "value": "69"},
+    "windSpeed": "6 mph",
+    "windDirection": "E",
+    "shortForecast": "Mostly Cloudy"
   }
 *continued
 ]
@@ -131,30 +131,30 @@ The response is always a JSON object.
 ``` json
 [
   {
-    'number': 1,
-    'name': 'Tonight',
-    'startTime': '2024-11-18 21:00:00',
-    'endTime': '2024-11-19 06:00:00',
-    'temperature': 72,
-    'temperatureUnit': 'F',
-    'probabilityOfPrecipitation': {'unitCode': 'wmoUnit:percent', 'value': None},
-    'windSpeed': '6 mph',
-    'windDirection': 'SE',
-    'shortForecast': 'Partly Cloudy',
-    'detailedForecast': 'Partly cloudy, with a low around 72. Southeast wind around 6 mph.'
+    "number": "1",
+    "name": "Tonight",
+    "startTime": "2024-11-18 21:00:00",
+    "endTime": "2024-11-19 06:00:00",
+    "temperature": "72",
+    "temperatureUnit": "F",
+    "probabilityOfPrecipitation": {"unitCode": "wmoUnit:percent", "value": "None"},
+    "windSpeed": "6 mph",
+    "windDirection": "SE",
+    "shortForecast": "Partly Cloudy",
+    "detailedForecast": "Partly cloudy, with a low around 72. Southeast wind around 6 mph."
   },
   {
-    'number': 2,
-    'name': 'Tuesday',
-    'startTime': '2024-11-19 06:00:00',
-    'endTime': '2024-11-19 18:00:00',
-    'temperature': 81,
-    'temperatureUnit': 'F',
-    'probabilityOfPrecipitation': {'unitCode': 'wmoUnit:percent', 'value': None},
-    'windSpeed': '5 to 10 mph',
-    'windDirection': 'SE',
-    'shortForecast': 'Mostly Sunny',
-    'detailedForecast': 'Mostly sunny, with a high near 81. Southeast wind 5 to 10 mph.'
+    "number": "2",
+    "name": "Tuesday",
+    "startTime": "2024-11-19 06:00:00",
+    "endTime": "2024-11-19 18:00:00",
+    "temperature": "81",
+    "temperatureUnit": "F",
+    "probabilityOfPrecipitation": {"unitCode": "wmoUnit:percent", "value": "None"},
+    "windSpeed": "5 to 10 mph",
+    "windDirection": "SE",
+    "shortForecast": "Mostly Sunny",
+    "detailedForecast": "Mostly sunny, with a high near 81. Southeast wind 5 to 10 mph."
   }
 *continued
 ]
