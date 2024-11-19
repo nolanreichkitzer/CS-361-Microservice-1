@@ -155,3 +155,7 @@ The response is always a JSON object.
 
 ```
 
+### UML - Sequence Diagram
+
+![image](https://github.com/user-attachments/assets/ba994623-96f8-4c9e-b35e-ce6dc168b6c8)
+
