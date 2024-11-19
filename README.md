@@ -98,21 +98,32 @@ The response is always a JSON object.
 ``` json
 [
   {
-    "startTime": "2024-11-18 14:00:00",
-    "endTime": "2024-11-18 15:00:00",
-    "temperature": 55,
-    "temperatureUnit": "F",
-    "windSpeed": "10 mph",
-    "shortForecast": "Sunny"
+    'number': 1,
+    'startTime': '2024-11-18 21:00:00',
+    'endTime': '2024-11-18 22:00:00',
+    'temperature': 75,
+    'temperatureUnit': 'F',
+    'probabilityOfPrecipitation': {'unitCode': 'wmoUnit:percent', 'value': 1},
+    'dewpoint': {'unitCode': 'wmoUnit:degC', 'value': 17.77777777777778},
+    'relativeHumidity': {'unitCode': 'wmoUnit:percent', 'value': 69},
+    'windSpeed': '6 mph',
+    'windDirection': 'E',
+    'shortForecast': 'Mostly Cloudy'
   },
   {
-    "startTime": "2024-11-18 15:00:00",
-    "endTime": "2024-11-18 16:00:00",
-    "temperature": 56,
-    "temperatureUnit": "F",
-    "windSpeed": "12 mph",
-    "shortForecast": "Partly Cloudy"
+    'number': 2,
+    'startTime': '2024-11-18 22:00:00',
+    'endTime': '2024-11-18 23:00:00',
+    'temperature': 75,
+    'temperatureUnit': 'F',
+    'probabilityOfPrecipitation': {'unitCode': 'wmoUnit:percent', 'value': 2},
+    'dewpoint': {'unitCode': 'wmoUnit:degC', 'value': 17.77777777777778},
+    'relativeHumidity': {'unitCode': 'wmoUnit:percent', 'value': 69},
+    'windSpeed': '6 mph',
+    'windDirection': 'E',
+    'shortForecast': 'Mostly Cloudy'
   }
+*continued
 ]
 ```
 
@@ -120,21 +131,32 @@ The response is always a JSON object.
 ``` json
 [
   {
-    "startTime": "2024-11-18 08:00:00",
-    "endTime": "2024-11-18 20:00:00",
-    "temperature": 60,
-    "temperatureUnit": "F",
-    "windSpeed": "10 mph",
-    "shortForecast": "Partly Cloudy"
+    'number': 1,
+    'name': 'Tonight',
+    'startTime': '2024-11-18 21:00:00',
+    'endTime': '2024-11-19 06:00:00',
+    'temperature': 72,
+    'temperatureUnit': 'F',
+    'probabilityOfPrecipitation': {'unitCode': 'wmoUnit:percent', 'value': None},
+    'windSpeed': '6 mph',
+    'windDirection': 'SE',
+    'shortForecast': 'Partly Cloudy',
+    'detailedForecast': 'Partly cloudy, with a low around 72. Southeast wind around 6 mph.'
   },
   {
-    "startTime": "2024-11-19 08:00:00",
-    "endTime": "2024-11-19 20:00:00",
-    "temperature": 62,
-    "temperatureUnit": "F",
-    "windSpeed": "8 mph",
-    "shortForecast": "Sunny"
+    'number': 2,
+    'name': 'Tuesday',
+    'startTime': '2024-11-19 06:00:00',
+    'endTime': '2024-11-19 18:00:00',
+    'temperature': 81,
+    'temperatureUnit': 'F',
+    'probabilityOfPrecipitation': {'unitCode': 'wmoUnit:percent', 'value': None},
+    'windSpeed': '5 to 10 mph',
+    'windDirection': 'SE',
+    'shortForecast': 'Mostly Sunny',
+    'detailedForecast': 'Mostly sunny, with a high near 81. Southeast wind 5 to 10 mph.'
   }
+*continued
 ]
 
 ```
@@ -151,11 +173,14 @@ The response is always a JSON object.
     "description": "A severe thunderstorm has been detected...",
     "instruction": "Seek shelter indoors immediately."
   }
+*continued
 ]
 
 ```
 
+
 ### UML - Sequence Diagram
 
-![image](https://github.com/user-attachments/assets/ba994623-96f8-4c9e-b35e-ce6dc168b6c8)
+This sequence diagram describes the interactions between the programs.
 
+![image](https://github.com/user-attachments/assets/ba994623-96f8-4c9e-b35e-ce6dc168b6c8)
